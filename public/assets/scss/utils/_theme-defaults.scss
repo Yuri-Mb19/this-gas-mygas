@@ -1,0 +1,620 @@
+/*
+Theme Name: Petr - Gas & Oil Industrial HTML Template
+Theme URI: https://www.iddrak.com
+Author: Iddrak
+Author URI: https://www.iddrak.com
+Description: Industrial template
+Version: 1.0.0
+*/
+
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+
+=> Font url
+=> Normalize
+=> Accessibility
+=> Globals
+=> Container width
+=> Page title section
+=> Spacing
+=> Alignments
+=> Clearings
+=> Button
+    - Button two
+=> Section Title
+=> Unit test
+=> Gutenberg Default Style
+=> Header Section
+=> Benifits section
+=> About section
+=> Services section
+=> Clients section
+=> Works section
+=> Call to section
+=> Get in touch section
+=> Projects section
+=> Blog section
+=> Newsletter section
+=> Footer section
+=> Team section
+=> Solution section
+=> Service details section
+=> Project details section
+=> Blog section
+=> Blog details section
+=> Blog sidebar section
+=> Contact section
+
+
+--------------------------------------*/
+
+
+/* font url */
+
+$font-url: 'https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap';
+
+/* Normalize
+--------------------------------------*/
+
+
+/* Colors */
+
+$primary_Color: #F55B14;
+$secondary_Color: #08172e;
+$heading_Color: #111111;
+$paragraph_Color: #7b7b7b;
+$black_Color: #111111;
+$white_Color: #ffffff;
+
+/* Fonts */
+
+$heading_Font: 'Poppins',
+sans-serif;
+$body_Font: 'Poppins',
+sans-serif;
+
+/* Box shadow */
+
+$box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.04);
+$box-shadow-primary: 2.088px 14.854px 30px 0px rgba(245, 91, 20, 0.1);
+
+/* Defaults */
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    overflow-x: hidden;
+    font-family: $body_Font;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    margin: 0;
+    color: var(--paragraph-color);
+    overflow-x: hidden;
+    font-family: $body_Font;
+    font-size: 15px;
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 44px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+h5 {
+    font-size: 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $heading_Color;
+    font-family: $heading_Font;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+p {
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    margin-bottom: 0;
+    line-height: 30px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: $body_Font;
+}
+
+p.text {
+    color: $paragraph_Color;
+    font-family: $body_Font;
+    margin-bottom: 0;
+    font-weight: 400;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    color: $paragraph_Color;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+    outline: none;
+    color: inherit;
+}
+
+pre {
+    word-break: break-word;
+}
+
+a i {
+    padding: 0 2px;
+}
+
+img {
+    max-width: 100%;
+}
+
+ol {
+    counter-reset: counter;
+    padding-left: 0;
+}
+
+ol li {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+ol li:before {
+    counter-increment: counter;
+    content: counter(counter);
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*input and button type focus outline disable*/
+
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=url]:focus,
+input[type=password]:focus,
+input[type=search]:focus,
+input[type=tel]:focus,
+input[type=number]:focus,
+textarea:focus,
+input[type=button]:focus,
+input[type=reset]:focus,
+input[type=submit]:focus,
+select:focus {
+    outline: none;
+    box-shadow: none;
+    border: 1px solid #ddd;
+}
+
+code {
+    color: $primary_Color;
+}
+
+
+/* Accessibility
+---------------------------------------*/
+
+
+/* Text meant only for screen readers. */
+
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important;
+    /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    -webkit-clip-path: none;
+    clip-path: none;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+    /* Above WP toolbar. */
+}
+
+
+/* Do not show the outline on the skip link target. */
+
+#content[tabindex="-1"]:focus {
+    outline: 0;
+}
+
+
+/* Globals
+---------------------------------------*/
+
+
+/* Container width
+-------------------------------------- */
+
+#default-home .container {
+    max-width: 1200px;
+}
+
+@media (max-width: 767px) {
+    #hero-section .container {
+        max-width: 600px;
+    }
+}
+
+.card,
+.card-body {
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+    border: 0;
+}
+
+
+/* Contact form success message
+-------------------------------------- */
+
+#form-messages {
+    color: green;
+}
+
+
+/* Media
+--------------------- */
+
+embed,
+iframe,
+object {
+    max-width: 100%;
+}
+
+.custom-logo-link {
+    display: inline-block;
+}
+
+
+/* Captions
+--------------------- */
+
+.wp-caption {
+    margin-bottom: 1.5em;
+    max-width: 100%;
+    clear: both;
+}
+
+.wp-caption img[class*=wp-image-] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+    margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+    text-align: center;
+}
+
+
+/* Unit test
+-----------------------------------*/
+
+.wp-link-pages a {
+    margin: 0 5px;
+    transition: 0.3s ease-in;
+}
+
+.wp-link-pages {
+    margin-bottom: 30px;
+    margin-top: 25px;
+}
+
+.wp-link-pages span,
+.wp-link-pages a {
+    border: 1px solid #e2e2e2;
+    padding: 5px 15px;
+    display: inline-block;
+}
+
+.wp-link-pages .current,
+.wp-link-pages a:hover {
+    background-color: $primary_Color;
+    color: var(--color-white);
+    border-color: $primary_Color;
+}
+
+.wp-link-pages span:first-child {
+    margin-right: 5px;
+}
+
+.post-password-form input {
+    display: block;
+    border: 1px solid #e2e2e2;
+    height: 50px;
+    border-radius: 3px;
+    padding: 0 20px;
+}
+
+.post-password-form label {
+    font-weight: 600;
+    color: #333;
+}
+
+.post-password-form input[type=submit] {
+    width: 100px;
+    height: 50px;
+    background-color: $primary_Color;
+    color: $white_Color;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+.post-password-form input[type=submit]:hover {
+    background-color: #121A2F;
+}
+
+.footer-widget .table td,
+.footer-widget .table th {
+    padding: 0.5rem !important;
+}
+
+
+/* Gutenberg Default Style
+------------------------------------*/
+
+.single-post-details-item .entry-content>.alignwide {
+    max-width: 1100px;
+}
+
+.single-post-details-item .entry-content>.alignfull {
+    margin: 1.5em 0;
+    max-width: 100%;
+}
+
+.wp-block-video video {
+    max-width: 636px;
+}
+
+.wp-block-image img {
+    display: block;
+}
+
+.wp-block-image.alignleft,
+.wp-block-image.alignright {
+    width: 100%;
+}
+
+.wp-block-image.alignfull img {
+    width: 100vw;
+}
+
+.wp-block-project:not(.components-placeholder) {
+    margin: 1.5em auto;
+}
+
+.wp-block-cover-text p {
+    padding: 1.5em 14px;
+}
+
+ul.wp-block-latest-posts.alignwide,
+ul.wp-block-latest-posts.alignfull,
+ul.wp-block-latest-posts.is-grid.alignwide,
+ul.wp-block-latest-posts.is-grid.alignwide {
+    padding: 0 14px;
+}
+
+.wp-block-table {
+    display: block;
+    overflow-x: auto;
+}
+
+.wp-block-table table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.wp-block-table td,
+.wp-block-table th {
+    padding: 0.5em;
+}
+
+.wp-block-embed.type-video>.wp-block-embed__wrapper {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%;
+}
+
+.wp-block-embed.type-video>.wp-block-embed__wrapper>iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.wp-block-quote.is-large {
+    margin: 0 auto 15px;
+}
+
+.wp-block-pullquote>p:first-child {
+    margin-top: 0;
+}
+
+.wp-block-separator {
+    margin: 3em auto;
+    padding: 0;
+}
+
+@media screen and (min-width: 767px) {
+    .wp-block-cover-text p {
+        padding: 1.5em 0;
+    }
+}
+
+wp-block-video video {
+    max-width: 636px;
+}
+
+.wp-block-image img {
+    display: block;
+}
+
+.wp-block-image.alignleft,
+.wp-block-image.alignright {
+    width: 100%;
+}
+
+.wp-block-image.alignfull img {
+    width: 100vw;
+}
+
+.wp-block-project:not(.components-placeholder) {
+    margin: 1.5em auto;
+}
+
+.wp-block-cover-text p {
+    padding: 1.5em 14px;
+}
+
+ul.wp-block-latest-posts.alignwide,
+ul.wp-block-latest-posts.alignfull,
+ul.wp-block-latest-posts.is-grid.alignwide,
+ul.wp-block-latest-posts.is-grid.alignwide {
+    padding: 0 14px;
+}
+
+.wp-block-table {
+    display: block;
+    overflow-x: auto;
+}
+
+.wp-block-table table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.wp-block-table td,
+.wp-block-table th {
+    padding: 0.5em;
+}
+
+.wp-block-embed.type-video>.wp-block-embed__wrapper {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%;
+}
+
+.wp-block-embed.type-video>.wp-block-embed__wrapper>iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.wp-block-quote.is-large {
+    margin: 0 auto 15px;
+}
+
+.wp-block-pullquote>p:first-child {
+    margin-top: 0;
+}
+
+.wp-block-quote:not(.is-large):not(.is-style-large) {
+    border-left: 4px solid #000;
+    padding-left: 1em;
+}
+
+.wp-block-separator {
+    margin: 3em auto;
+    padding: 0;
+}
+
+@media screen and (min-width: 767px) {
+    .wp-block-cover-text p {
+        padding: 1.5em 0;
+    }
+}
+
+.wp-block-pullquote {
+    border-top: 4px solid #555d66;
+    border-bottom: 4px solid #555d66;
+    color: #40464d;
+}

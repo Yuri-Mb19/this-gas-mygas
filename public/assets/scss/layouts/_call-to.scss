@@ -1,0 +1,23 @@
+/* Call to section
+------------------------ */
+
+#call-to-section {
+    background: url(../images/banner/hero-04.jpg);
+    background-position: center;
+    background-repeat: repeat;
+    & .overlay {
+        background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, .8), rgba(245, 91, 20, .2));
+        padding: 100px 0;
+    }
+    & .call-to-content {
+        & .subtitle,
+        & .title,
+        & h5 {
+            color: $white_Color;
+        }
+        & .subtitle {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+    }
+}

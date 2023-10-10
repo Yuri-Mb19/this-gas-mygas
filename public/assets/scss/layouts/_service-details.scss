@@ -1,0 +1,76 @@
+/* Service details section
+------------------------ */
+
+.single-service-block {
+    & .thumb {
+        position: relative;
+        padding-right: 100px;
+        @media #{$xs} {
+            padding-right: 0;
+            margin-bottom: 50px;
+        }
+        @media #{$sm} {
+            margin-bottom: 80px;
+        }
+        @media #{$md} {
+            margin-bottom: 80px;
+        }
+        & .img-two {
+            position: absolute;
+            right: 30px;
+            bottom: -50px;
+            border: 15px solid $white_Color;
+            @media #{$xs} {
+                display: none;
+            }
+            @media #{$sm} {
+                right: 0;
+            }
+        }
+    }
+    & .inner-text {
+        & .title {
+            @media #{$xs} {
+                margin-top: 40px;
+            }
+            @media #{$sm} {
+                margin-top: 30px;
+            }
+            @media #{$md} {
+                margin-top: 30px;
+            }
+            @media #{$lg} {
+                margin-top: 40px;
+            }
+        }
+    }
+    & .service-detl-list {
+        & li {
+            padding: 5px 0;
+            color: $paragraph_Color;
+            & i {
+                color: $primary_Color;
+                font-size: 20px;
+                margin-right: 10px;
+                height: 20px;
+                width: 20px;
+                line-height: 18px;
+                background-color: $black_Color;
+                display: block;
+                text-align: center;
+                clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
+            }
+        }
+    }
+    & .sub-heading {
+        & i {
+            font-size: 52px;
+            color: $primary_Color;
+        }
+        & h4 {
+            padding-left: 30px;
+            font-size: 22px;
+            line-height: 32px;
+        }
+    }
+}

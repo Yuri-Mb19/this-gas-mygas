@@ -1,0 +1,18 @@
+/* Solution section
+------------------------ */
+
+#about-section {
+    & .about-img-box {
+        @media #{$md} {
+            padding-left: 0;
+        }
+        & .content {
+            @media #{$md} {
+                right: 20px;
+            }
+            @media #{$xs} {
+                top: 0;
+            }
+        }
+    }
+}

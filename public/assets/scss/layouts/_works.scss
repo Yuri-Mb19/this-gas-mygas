@@ -1,0 +1,74 @@
+/* Works section
+------------------------ */
+
+#works-section {
+    position: relative;
+    @media #{$lg} {
+        margin-top: 70px;
+    }
+    & .works-block {
+        position: relative;
+        padding-top: 20px;
+        padding-left: 30px;
+        padding-bottom: 30px;
+        border-left: 1px solid $primary_Color;
+        &::before {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            clip-path: polygon(0 0, 0% 100%, 100% 100%);
+            background-color: rgba(0, 0, 0, .02);
+            @include transition(.5s);
+            z-index: -1;
+        }
+        & span {
+            display: block;
+            color: $primary_Color;
+            font-weight: 600;
+            font-size: 28px;
+        }
+        & .title {
+            margin: 15px 0;
+        }
+    }
+    & .works-img-box {
+        padding-left: 60px;
+        @media #{$xs,$sm} {
+            padding-left: 0;
+            margin-top: 50px;
+        }
+        @media #{$md} {
+            padding-left: 0;
+            margin-top: 50px;
+        }
+        @media #{$lg} {
+            margin-top: -163px;
+        }
+        & img {
+            box-shadow: $box-shadow;
+        }
+    }
+    & .works-shape-01 {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: -1;
+        animation: workAnimate 3s linear infinite;
+        background-color: $black_Color;
+        padding: 30px;
+        @media #{$xs,$sm} {
+            display: none;
+        }
+    }
+    @keyframes workAnimate {
+        50% {
+            transform: translateY(-20px);
+        }
+        100% {
+            transform: translateX(20px);
+        }
+    }
+}

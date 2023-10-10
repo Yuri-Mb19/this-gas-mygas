@@ -1,0 +1,17 @@
+/* Contact section
+------------------------ */
+
+.google-map {
+    & iframe {
+        width: 100%;
+        height: 400px;
+    }
+}
+
+.contact-social {
+    & ul {
+        & li {
+            padding: 0 10px;
+        }
+    }
+}

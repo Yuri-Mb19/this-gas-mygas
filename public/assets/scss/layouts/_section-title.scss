@@ -1,0 +1,99 @@
+/* Section title 01 
+--------------------------- */
+
+.section-title.style-01 {
+    position: relative;
+    max-width: 650px;
+    & .title-transparent {
+        position: absolute;
+        top: -50px;
+        left: 0;
+        & span {
+            font-size: 100px;
+            font-weight: bold;
+            text-transform: uppercase;
+            opacity: .03;
+            @media #{$xs,$sm} {
+                font-size: 70px;
+            }
+        }
+    }
+    & .subtitle {
+        position: relative;
+        color: #666;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+        @media #{$xs,$sm} {
+            font-size: 18px;
+        }
+        &::before {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: -5px;
+            width: 100px;
+            height: 2px;
+            background-color: #999999;
+        }
+    }
+    & .title {
+        color: $black_Color;
+        @media #{$xs,$sm} {
+            font-size: 28px;
+        }
+    }
+    & .title span {
+        font-weight: 300;
+    }
+}
+
+
+/* Section title 02 
+--------------------------- */
+
+.section-title.style-02 {
+    position: relative;
+    max-width: 650px;
+    & .title-transparent {
+        position: absolute;
+        top: -50px;
+        left: 0;
+        & span {
+            font-size: 100px;
+            font-weight: bold;
+            text-transform: uppercase;
+            opacity: .07;
+            color: $white_Color;
+            @media #{$xs,$sm} {
+                font-size: 70px;
+            }
+        }
+    }
+    & .subtitle {
+        position: relative;
+        color: #666;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        @media #{$xs,$sm} {
+            font-size: 18px;
+        }
+        &::before {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: -5px;
+            width: 100px;
+            height: 2px;
+            background-color: #999999;
+        }
+    }
+    & .title {
+        color: $white_Color;
+        @media #{$xs,$sm} {
+            font-size: 28px;
+        }
+    }
+    & .title span {
+        font-weight: 300;
+    }
+}

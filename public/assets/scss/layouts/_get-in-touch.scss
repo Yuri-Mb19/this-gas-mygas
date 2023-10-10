@@ -1,0 +1,48 @@
+/* Get in touch section
+------------------------ */
+
+#get-in-touch-section {
+    position: relative;
+    & .get-in-touch {
+        & h2 {
+            font-size: 100px;
+            line-height: 120px;
+            letter-spacing: -2px;
+        }
+    }
+    & .request-form {
+        & input {
+            width: 100%;
+            padding: 15px 20px;
+            margin-bottom: 30px;
+            border-radius: 0;
+        }
+        & textarea {
+            height: 150px;
+            margin-bottom: 30px;
+            border-radius: 0;
+            &:focus,
+            &:active {
+                box-shadow: none;
+                border-color: #ced4da;
+            }
+        }
+    }
+    & .quote-info {
+        & i {
+            font-size: 52px;
+            margin-right: 20px;
+            color: $primary_Color;
+            &:hover {
+                transform: scale(-1) rotate(180deg);
+            }
+        }
+        & h4 {
+            margin-bottom: 5px;
+        }
+        & span {
+            color: #6b6b6b;
+            font-size: 20px;
+        }
+    }
+}

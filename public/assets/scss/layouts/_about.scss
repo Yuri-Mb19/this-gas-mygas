@@ -1,0 +1,76 @@
+/* About section
+------------------------ */
+
+#about-section {
+    position: relative;
+    & .bg-shape-img {
+        position: absolute;
+        left: -100px;
+        bottom: -150px;
+        z-index: -1;
+        opacity: .3;
+    }
+    & .about-info {
+        text-align: center;
+        box-shadow: $box-shadow;
+        padding: 30px 10px;
+        background-color: $black_Color;
+        @include transition(.5s);
+        clip-path: polygon(6% 0, 100% 0%, 94% 100%, 0% 100%);
+        @media #{$xs,$sm} {
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+        }
+        &.active i,
+        &.active .title {
+            color: $white_Color;
+        }
+        &.active {
+            background-color: $primary_Color;
+            @media #{$xs,$sm} {
+                background-color: $black_Color;
+            }
+        }
+        &:hover {
+            background-color: $primary_Color;
+        }
+        & .icon i {
+            font-size: 30px;
+            color: $white_Color;
+        }
+        .title {
+            color: $white_Color;
+        }
+        &:hover i {
+            color: $white_Color;
+        }
+        &:hover .title {
+            color: $white_Color;
+        }
+    }
+    & .about-img-box {
+        position: relative;
+        @media #{$xs,$sm} {
+            padding-left: 0;
+        }
+        & .content {
+            position: absolute;
+            top: 30%;
+            right: -50px;
+            transform: translateY(-30%);
+            background-color: $white_Color;
+            border-top: 5px solid $primary_Color;
+            padding: 20px 50px;
+            box-shadow: $box-shadow;
+            @media #{$xs,$sm} {
+                right: 20px;
+            }
+            @media #{$md} {
+                right: 20px;
+            }
+            & span {
+                color: $primary_Color;
+                font-size: 42px;
+            }
+        }
+    }
+}

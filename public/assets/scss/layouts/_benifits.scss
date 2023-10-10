@@ -1,0 +1,88 @@
+/* Benifits section
+------------------------ */
+
+#benifits {
+    margin-top: -90px;
+    & .benifits-content {
+        position: relative;
+        z-index: 1;
+        clip-path: polygon(2% 0, 100% 0%, 98% 100%, 0% 100%);
+        @media #{$xs,$sm} {
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+        }
+        &::before {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color: $black_Color;
+            z-index: -1;
+            @media #{$xs,$sm} {
+                background-color: transparent;
+            }
+        }
+        & .benifits-content-detl {
+            @media #{$xs,$sm} {
+                display: block !important;
+            }
+        }
+        & .heading {
+            background-color: #F55B14;
+            padding: 50px 0 50px 50px;
+            width: 25%;
+            clip-path: polygon(4% 0, 100% 0%, 91% 100%, 0% 100%);
+            @media #{$xs,$sm} {
+                width: 100%;
+                clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+                text-align: center;
+                padding: 50px;
+            }
+            @media #{$md} {
+                padding: 50px 0 50px 30px;
+            }
+        }
+        & .content {
+            padding: 50px 0 50px 30px;
+            width: 25%;
+            clip-path: polygon(2% 0, 100% 0%, 98% 100%, 0% 100%);
+            position: relative;
+            @media #{$xs,$sm} {
+                text-align: center;
+                width: 100%;
+                clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+                border-top: 1px solid #222;
+                background-color: $black_Color;
+                padding: 50px;
+            }
+            @media #{$md} {
+                padding: 50px 0 50px 20px;
+            }
+            &::before {
+                position: absolute;
+                content: "";
+                right: 21px;
+                top: 0px;
+                width: 2px;
+                height: 180%;
+                z-index: 1;
+                border-right: 1px solid #222;
+                transform: rotate(8deg);
+                @media #{$xs,$sm} {
+                    border: none;
+                }
+            }
+        }
+        & h3 {
+            color: $white_Color;
+            margin-bottom: 7px;
+            & span {
+                display: block;
+            }
+        }
+        & h4 {
+            color: $white_Color;
+        }
+    }
+}

@@ -1,0 +1,99 @@
+/* Footer section
+------------------------ */
+
+#footer-section {
+    position: relative;
+    background: url(../images/footer.jpg);
+    & .overlay {
+        background-color: rgba(243, 246, 256, .98);
+        padding: 120px 0 0;
+    }
+    & .widget {
+        & .logo img {
+            width: 200px;
+        }
+        & .title {
+            position: relative;
+            color: $black_Color;
+            padding-left: 15px;
+            &::before {
+                position: absolute;
+                content: "";
+                left: 0;
+                top: 3px;
+                width: 4px;
+                height: 20px;
+                background-color: #F55B14;
+                z-index: 1;
+            }
+        }
+        & p {
+            color: $black_Color;
+            margin-top: 30px;
+        }
+        & ul {
+            & li {
+                color: $black_Color;
+                padding: 5px 0;
+                display: block;
+                & a {
+                    @include transition(.5s);
+                    &:hover {
+                        color: $primary_Color;
+                    }
+                }
+                h5 {
+                    font-size: 15px;
+                    @include transition(.5s);
+                    &:hover {
+                        color: $primary_Color;
+                    }
+                }
+                img {
+                    width: 200px;
+                    padding-right: 20px;
+                }
+                & span {
+                    display: block;
+                    margin-top: 10px;
+                    color: $primary_Color;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    & .copyright {
+        margin-top: 70px;
+        line-height: 70px;
+        background-color: $black_Color;
+        padding: 20px 50px;
+        clip-path: polygon(2% 0, 100% 0%, 99% 100%, 0% 100%);
+        & ul {
+            @media #{$xs} {
+                margin-top: 20px;
+            }
+            & li a i {
+                border: 1px solid #555;
+                height: 30px;
+                width: 30px;
+                line-height: 30px;
+                text-align: center;
+                color: #555;
+                display: block;
+                margin-left: 10px;
+                font-size: 13px;
+                clip-path: polygon(14% 0, 100% 0%, 87% 100%, 0% 100%);
+                @include transition(.5s);
+                @media #{$xs,$sm} {
+                    margin-left: 0;
+                    margin-right: 10px;
+                    margin-bottom: 10px;
+                }
+                &:hover {
+                    color: $primary_Color;
+                    border: 1px solid $primary_Color;
+                }
+            }
+        }
+    }
+}

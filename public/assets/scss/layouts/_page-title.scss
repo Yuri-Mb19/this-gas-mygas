@@ -1,0 +1,26 @@
+/* Page title section
+------------------------ */
+
+#banner-section {
+    background-position: center;
+    background-repeat: repeat;
+    & .overlay {
+        background: rgba(0, 0, 0, .5);
+        padding: 130px 0 70px;
+    }
+    & .breadcrubms {
+        & .title {
+            color: $white_Color;
+        }
+        & ul {
+            & li {
+                padding: 0 10px;
+                font-size: 20px;
+                color: $white_Color;
+                & .active {
+                    color: $primary_Color;
+                }
+            }
+        }
+    }
+}

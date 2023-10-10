@@ -1,0 +1,144 @@
+/*----------------------------------
+    Hero section
+----------------------------------*/
+
+
+/* Slider animation */
+
+#hero-section-one .owl-item.active .hero-content-one::before {
+    animation: fadeInLeft 1s .5s both;
+}
+
+#hero-section-one .owl-item.active .hero-content-one::after {
+    animation: fadeInUp 1s .5s both;
+}
+
+#hero-section-one .owl-item.active .hero-content-one .subtitle {
+    animation: fadeInLeft 1.3s 1s both;
+}
+
+#hero-section-one .owl-item.active .title {
+    animation: fadeInUp 1.3s 1s both;
+}
+
+#hero-section-one .owl-item.active .hero-btn {
+    animation: fadeInUp 2s 1.5s both;
+}
+
+
+/* Hero shape image */
+
+
+/* hero one */
+
+#hero-section-one {
+    & .overlay {
+        padding: 230px 0 270px;
+        background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+        width: 100%;
+        & .hero-bg-01 {
+            background-size: cover;
+            background-position: center left;
+            background-repeat: no-repeat;
+        }
+        & .hero-content-one {
+            position: relative;
+            width: 80%;
+            text-align: center;
+            margin: auto;
+            @media #{$xs,$sm} {
+                width: 100%;
+            }
+            & .subtitle {
+                position: relative;
+                font-size: 20px;
+                font-weight: 700;
+                font-family: 'Antonio', sans-serif;
+                text-transform: uppercase;
+                padding-left: 100px;
+                color: $primary_Color;
+                @media #{$xs,$sm} {
+                    font-size: 16px;
+                    padding-left: 65px;
+                }
+                &::before {
+                    position: absolute;
+                    content: "";
+                    left: 35px;
+                    top: 50%;
+                    transform: translateX(-50%);
+                    width: 70px;
+                    border-bottom: 3px solid $primary_Color;
+                    @media #{$xs,$sm} {
+                        width: 30px;
+                    }
+                }
+            }
+            & .title {
+                margin-top: 20px;
+                font-size: 90px;
+                line-height: 90px;
+                color: $white_Color;
+                font-weight: 700;
+                @media #{$xs,$sm} {
+                    font-size: 60px;
+                    line-height: 60px;
+                }
+                @media #{$md, $lg} {
+                    font-size: 70px;
+                }
+            }
+            & .text {
+                margin-top: 20px;
+            }
+        }
+    }
+    & .owl-nav {
+        & div {
+            position: absolute;
+            text-align: center;
+            line-height: 100px;
+            color: var(--color-white);
+            border-radius: 1%;
+            transition: all 0.3s ease-in;
+            visibility: hidden;
+            opacity: 0;
+            transition: all linear .3s;
+            &.owl-prev,
+            &.owl-next {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            &.owl-prev {
+                left: 50px;
+            }
+            &.owl-next {
+                right: 50px;
+            }
+            & i {
+                font-size: 32px;
+                height: 80px;
+                width: 80px;
+                line-height: 80px;
+                display: block;
+                background: #444;
+                color: #999;
+                -webkit-transition: all linear .3s;
+                -moz-transition: all linear .3s;
+                -ms-transition: all linear .3s;
+                -o-transition: all linear .3s;
+                transition: all linear .3s;
+                clip-path: polygon(8% 0, 100% 0%, 93% 100%, 0% 100%);
+                &:hover {
+                    background-color: $primary_Color;
+                    color: $white_Color;
+                }
+            }
+        }
+    }
+    &:hover .owl-nav div {
+        visibility: visible;
+        opacity: 1;
+        transition: all linear .3s;
+    }
+}

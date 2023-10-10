@@ -1,0 +1,45 @@
+/* Team section
+------------------------ */
+
+.team-block {
+    position: relative;
+    overflow: hidden;
+    @include transition(.5s);
+    & .content {
+        position: absolute;
+        left: -100%;
+        top: 0;
+        background: rgba(255, 255, 255, .5);
+        padding: 10px 20px;
+        visibility: hidden;
+        opacity: 0;
+        @include transition(.5s);
+    }
+    &:hover .content {
+        visibility: visible;
+        opacity: 1;
+        left: 0;
+    }
+    & .social {
+        position: absolute;
+        right: -100%;
+        bottom: 0;
+        background: rgba(255, 255, 255, .5);
+        padding: 10px 5px 5px;
+        visibility: hidden;
+        opacity: 0;
+        @include transition(.5s);
+        & li a i {
+            padding: 10px;
+            @include transition(.5s);
+            &:hover {
+                color: $primary_Color;
+            }
+        }
+    }
+    &:hover .social {
+        visibility: visible;
+        opacity: 1;
+        right: 0;
+    }
+}

@@ -1,0 +1,73 @@
+/* Services section
+------------------------ */
+
+#service-section {
+    background: url(../images/pattern-bg.png);
+    background-position: center;
+    background-repeat: repeat;
+    & .overlay {
+        background-color: rgba(0, 0, 0, .6);
+        padding: 100px 0;
+    }
+    & .service-block {
+        position: relative;
+        padding: 50px 30px;
+        &:hover .service-btn a {
+            color: $primary_Color;
+        }
+        &:hover .title {
+            color: $white_Color;
+        }
+        &:hover p {
+            color: $white_Color;
+        }
+        &:before {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color: $white_Color;
+            opacity: .05;
+            @include transition(.5s);
+        }
+        &:hover:before {
+            width: 5%;
+            background-color: $white_Color;
+            opacity: .1;
+            border-right: 5px solid $white_Color;
+        }
+        & .icon i {
+            color: $primary_Color;
+            font-size: 42px;
+        }
+        & p {
+            @include transition(.5s);
+        }
+        & .title {
+            color: #7b7b7b;
+            padding: 20px 0;
+            @include transition(.5s);
+            &:hover {
+                color: $primary_Color;
+            }
+        }
+        & .service-btn {
+            & a {
+                color: #7b7b7b;
+                @include transition(.5s);
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: 12px;
+                letter-spacing: 1px;
+                &:hover {
+                    color: $primary_Color;
+                }
+                & i {
+                    padding-left: 7px;
+                }
+            }
+        }
+    }
+}

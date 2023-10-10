@@ -1,0 +1,123 @@
+/* Blog sidebar section
+----------------------*/
+
+.blog-sidebar-wrapper {
+    & .widget {
+        border-left: 2px solid $primary_Color;
+        padding: 40px 30px;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+        margin-bottom: 55px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        & .heading {
+            position: relative;
+            font-size: 20px;
+            padding-left: 15px;
+            font-weight: 500;
+            &::before {
+                position: absolute;
+                content: "";
+                left: 0;
+                top: 4px;
+                height: 20px;
+                width: 4px;
+                background-color: $primary_Color;
+            }
+        }
+        & .blog-sidebar-search {
+            position: relative;
+            & input {
+                padding: 15px 15px 15px 20px;
+                width: 100%;
+                border: none;
+                background-color: $black_Color;
+                color: $white_Color;
+                clip-path: polygon(3% 0, 100% 0%, 96% 100%, 0% 100%);
+                @media #{$md} {
+                    clip-path: polygon(1% 0, 100% 0%, 98% 100%, 0% 100%);
+                }
+            }
+            & button {
+                position: absolute;
+                right: 8px;
+                top: 50%;
+                transform: translateY(-50%);
+                border: none;
+                background-color: transparent;
+                @media #{$md} {
+                    right: 8px;
+                }
+                & i {
+                    color: $white_Color;
+                    font-size: 16px;
+                    background-color: $primary_Color;
+                    height: 40px;
+                    width: 50px;
+                    line-height: 40px;
+                    display: block;
+                    clip-path: polygon(20% 0, 100% 0%, 83% 100%, 0% 100%);
+                    @media #{$md} {
+                        clip-path: polygon(22% 0, 100% 0%, 79% 100%, 0% 100%);
+                    }
+                }
+            }
+        }
+        & li {
+            padding: 5px 0;
+            & i {
+                font-size: 14px;
+            }
+            &:hover {
+                color: $primary_Color;
+            }
+        }
+        & a {
+            @include transition(.5s);
+            color: $paragraph_Color;
+        }
+        .rc-post-wrapper {
+            & .rc-thumb {
+                width: 45%;
+                @media#{$sm} {
+                    width: 30%;
+                }
+                @media#{$md} {
+                    width: 20%;
+                }
+            }
+            & .rc-content {
+                width: 55%;
+                & .rc-title a {
+                    @include transition(.5s);
+                    color: $heading_Color;
+                    margin-bottom: 7px;
+                    display: block;
+                    &:hover {
+                        color: $primary_Color;
+                    }
+                }
+                & span {
+                    color: $paragraph_Color;
+                }
+            }
+            & i {
+                font-size: 13px;
+                color: $primary_Color;
+                margin-right: 5px;
+            }
+        }
+        & .tagcloud a {
+            border: 1px solid #f4f4f4;
+            padding: 10px 10px;
+            line-height: 43px;
+            margin-bottom: 2px;
+            @include transition(.5s);
+            &:hover {
+                border: 1px solid $primary_Color;
+                background-color: $primary_Color;
+                color: $white_Color
+            }
+        }
+    }
+}

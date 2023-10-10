@@ -1,0 +1,124 @@
+/* Projects section
+------------------------ */
+
+#project-section {
+    position: relative;
+    background: url(../images/pattern-bg.png);
+    background-position: center;
+    background-repeat: repeat;
+    & .bg-shape-img {
+        position: absolute;
+        left: -100px;
+        bottom: 0;
+    }
+    & .overlay {
+        background-color: rgba(0, 0, 0, .6);
+        padding: 100px 0 0;
+    }
+    & .project__slider {
+        position: relative;
+        margin-right: -350px;
+        @media #{$xs,$sm,$md} {
+            margin-right: 0;
+        }
+        & .project-item {
+            position: relative;
+            box-shadow: $box-shadow;
+            overflow: hidden;
+            & .overlay {
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                visibility: visible;
+                opacity: 1;
+                // background: linear-gradient(to top, rgba(245, 91, 20, 1), rgba(245, 91, 20, 0));
+                background: linear-gradient(to bottom top, rgba(0, 0, 0, 1), rgba(245, 91, 20, 0));
+                @include transition(.5s);
+            }
+            &:hover .overlay {
+                visibility: hidden;
+                opacity: 0;
+                top: 0;
+            }
+            & .content-btn {
+                position: absolute;
+                left: 0;
+                bottom: -100%;
+                width: 88%;
+                background-color: $white_Color;
+                visibility: hidden;
+                opacity: 0;
+                border-left: 3px solid $primary_Color;
+                &:hover i {
+                    color: $primary_Color;
+                }
+                @include transition(.6s);
+                & .content-btn-text {
+                    padding: 20px 0 20px 20px;
+                    & .title {
+                        @include transition(.3s);
+                        &:hover {
+                            color: $primary_Color;
+                        }
+                    }
+                    & span {
+                        margin-top: 10px;
+                        color: $paragraph_Color;
+                        display: block;
+                        font-size: 12px;
+                        letter-spacing: 1px;
+                        text-transform: uppercase;
+                        color: #444;
+                        font-weight: 500;
+                    }
+                }
+                & i {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    text-align: center;
+                    background-color: $black_Color;
+                    width: 80px;
+                    height: 90px;
+                    line-height: 95px;
+                    font-size: 32px;
+                    color: $white_Color;
+                    display: block;
+                    @include transition(.3s);
+                }
+            }
+            &:hover .content-btn {
+                visibility: visible;
+                opacity: 1;
+                left: 20px;
+                bottom: 20px;
+            }
+            & .content {
+                position: absolute;
+                width: 80%;
+                left: 20px;
+                bottom: 20px;
+                background-color: rgba(255, 255, 255, .8);
+                padding: 30px;
+                border-left: 3px solid $primary_Color;
+                border-right: 3px solid $primary_Color;
+                box-shadow: $box-shadow;
+                @include transition(.6s);
+                & span {
+                    display: block;
+                    margin-top: 10px;
+                    text-transform: uppercase;
+                    font-size: 12px;
+                    letter-spacing: 1px;
+                }
+            }
+            &:hover .content {
+                visibility: hidden;
+                opacity: 0;
+                bottom: -100%;
+            }
+        }
+    }
+}
