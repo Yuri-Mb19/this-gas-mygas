@@ -10,7 +10,7 @@
             <h3>Recomendo que trabalhe ou use apenas um Id para nao ter problemas nas paginas de noticias</h3>
             <br><br>
             <div class="pull-right" style="margin-bottom:50px;">
-        <!--    <a class="btn btn-success" href="{{ url('create3') }}"> Create New Product</a> -->
+          <a class="btn btn-success" href="{{ url('create3') }}"> Create New Product</a> 
             </div>
         </div>
     </div>
@@ -45,7 +45,7 @@
                     @csrf
                     @method('DELETE')
          
-                   <!-- <button type="submit" class="btn btn-danger">Delete</button> ->
+                    <button type="submit" class="btn btn-danger">Delete</button> 
                 </form>
             </td>
         </tr>

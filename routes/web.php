@@ -58,15 +58,17 @@ Route::middleware('auth')->group(function() {
     Route::get('show2/{product2}', [\App\Http\Controllers\Product2Controller::class,'show'])->name('show2');
     Route::get('edit2/{product2}', [\App\Http\Controllers\Product2Controller::class,'edit'])->name('edit2');
     Route::put('edit2/{product2}', [\App\Http\Controllers\Product2Controller::class,'update'])->name('update2');
-    Route::delete('/{product2}', [\App\Http\Controllers\Product2Controller::class,'destroy'])->name('destroy2');
+    Route::delete('/product2s/{product2}', [\App\Http\Controllers\Product2Controller::class, 'destroy'])->name('destroy2');
 
 
+    
     Route::get('/crudd3', [\App\Http\Controllers\Product3Controller::class,'index'])->name('crudd3');
     Route::get('/create3', [\App\Http\Controllers\Product3Controller::class,'create'])->name('create3');
     Route::post('/store3', [\App\Http\Controllers\Product3Controller::class,'store'])->name('store3');
     Route::get('show3/{product3}', [\App\Http\Controllers\Product3Controller::class,'show'])->name('show3');
     Route::get('edit3/{product3}', [\App\Http\Controllers\Product3Controller::class,'edit'])->name('edit3');
     Route::put('edit3/{product3}', [\App\Http\Controllers\Product3Controller::class,'update'])->name('update3');
-    Route::delete('/{product3}', [\App\Http\Controllers\Product3Controller::class,'destroy'])->name('destroy3');
+    Route::delete('/product3s/{product3}', [\App\Http\Controllers\Product3Controller::class,'destroy'])->name('destroy3');
+    
     
 });

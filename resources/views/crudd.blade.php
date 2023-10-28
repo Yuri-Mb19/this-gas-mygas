@@ -10,9 +10,9 @@
                 <br><br>
             </div>
             <div class="pull-right" style="margin-bottom:50px;">
-           <!-- <a class="btn btn-success" href="{{ url('create') }}"> Create New Product</a> -->
-               <!-- Footer end -->
-               
+                @if($products->isEmpty())
+                    <a class="btn btn-success" href="{{ url('create') }}"> Create New Product</a> 
+                @endif
             </div>
         </div>
     </div>
@@ -47,7 +47,7 @@
                     @csrf
                     @method('DELETE')
          
-                    <!-- <button type="submit" class="btn btn-danger">Delete</button> -->
+                    <button type="submit" class="btn btn-danger">Delete</button> 
                 </form>
             </td>
         </tr>
