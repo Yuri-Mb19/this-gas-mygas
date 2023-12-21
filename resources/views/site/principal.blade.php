@@ -835,9 +835,10 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-4 col-sm-6">
+                        @foreach ($products as $product)
                         <div class="blog-block mt-30">
                             <div class="blog-thumb">
-                                <a href="{{ route( 'site.noticias_1' )}}"><img src="assets/images/planta2.jpg"  width="500" height="300"  alt=""></a>
+                                <a href="{{ route( 'site.noticias_1' )}}"><img src="/images/{{$product->image}}"  width="500" height="300"  alt=""></a>
                             </div>
                             <div class="blog-block-content mt-30">
                                 <ul class="meta-info d-flex">
@@ -845,21 +846,23 @@
                                     <li><a href="{{ route( 'site.noticias_1' )}}" id="cooments"><i class="fa fa-comment"></i> {{__('messages.cooments')}}</a></li>
                                 </ul>
                                 <h4 class="title mt-20 mb-20">
-                                    <a href="{{ route( 'site.noticias_1' )}}" id="osbeneficios">{{__('messages.osbeneficios')}}</a>
+                                    <a href="{{ route( 'site.noticias_1' )}}" id="osbeneficios">  {{ $product->name}}</a>
                                 </h4>
                                 <ul class="blog-btn mt-20" id="sabermaisx">
-                                    <li class="date"><i class="far fa-calendar-alt"></i> Março 5, 2023</li>
+                                    <li class="date"><i class="far fa-calendar-alt"></i> 29, Outubro</li>
                                     <li class="button">
                                         <a href="{{ route( 'site.noticias_1' )}}" id="sabermais">{{__('messages.sabermais')}}</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
+                        @endforeach
                     </div>
                     <div class="col-lg-4 col-sm-6">
+                        @foreach ($product2s as $product2)
                         <div class="blog-block mt-30">
                             <div class="blog-thumb">
-                                <a href="{{ route( 'site.noticias_2' )}}"><img src="assets/images/planta1.jpg" width="500" height="300" alt=""></a>
+                                <a href="{{ route( 'site.noticias_2' )}}"><img src="/images/{{ $product2->image }}" width="500" height="300" alt=""></a>
                             </div>
                             <div class="blog-block-content mt-30">
                                 <ul class="meta-info d-flex">
@@ -867,21 +870,23 @@
                                     <li><a href="{{ route( 'site.noticias_2' )}}" id="cooments"><i class="fa fa-comment"></i> {{__('messages.Comments')}}</a></li>
                                 </ul>
                                 <h4 class="title mt-20 mb-20">
-                                    <a href="{{ route( 'site.noticias_2' )}}" id="osbeneficios2">{{__('messages.osbeneficios2')}}</a>
+                                    <a href="{{ route( 'site.noticias_2' )}}" id="osbeneficios2">{{ $product2->name}}</a>
                                 </h4>
                                 <ul class="blog-btn mt-20" id="sabermaisx">
-                                    <li class="date"><i class="far fa-calendar-alt"></i> Março 5, 2023</li>
+                                    <li class="date"><i class="far fa-calendar-alt"></i> 4 Novembro, 2023</li>
                                     <li class="button">
                                         <a href="{{ route( 'site.noticias_2' )}}" id="sabermais">{{__('messages.sabermais')}}</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
+                        @endforeach
                     </div>
                     <div class="col-lg-4 col-sm-6">
+                        @foreach ($product3s as $product3)   
                         <div class="blog-block mt-30">
                             <div class="blog-thumb">
-                                <a href="{{ route( 'site.noticias_3' )}}"><img src="assets/images/planta3.jpg"  width="500" height="300" alt=""></a>
+                                <a href="{{ route( 'site.noticias_3' )}}"><img src="/images/{{ $product3->image }}"  width="500" height="300" alt=""></a>
                             </div>
                             <div class="blog-block-content mt-30">
                                 <ul class="meta-info d-flex">
@@ -889,16 +894,17 @@
                                     <li><a href="{{ route( 'site.noticias_3' )}}" id="cooments"><i class="fa fa-comment"></i> {{__('messages.cooments')}}</a></li>
                                 </ul>
                                 <h4 class="title mt-20 mb-20">
-                                    <a href="{{ route( 'site.noticias_3' )}}" id="osbeneficios3">5 maneiras de economizar dinheiro em botijões de gás para sua casa ou empresa</a>
+                                    <a href="{{ route( 'site.noticias_3' )}}" id="osbeneficios3">{{ $product3->name }}</a>
                                 </h4>
                                 <ul class="blog-btn mt-20" id="sabermaisx">
-                                    <li class="date"><i class="far fa-calendar-alt"></i> Março 5, 2023</li>
+                                    <li class="date"><i class="far fa-calendar-alt"></i> 30, Novembro</li>
                                     <li class="button">
                                         <a href="{{ route( 'site.noticias_3' )}}" id="sabermais">{{__('messages.sabermais')}}</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -1082,7 +1088,7 @@
                                     <a href="{{ route( 'site.noticias_1' )}}">
                                         <h5 id="osbeneficioss"></h5>
                                     </a>
-                                    <span>Março 5, 2023</span>
+                                    <span>4 Novembro</span>
                                 </li>
                             </ul>
                             <ul class="d-flex mt-20">
@@ -1091,7 +1097,7 @@
                                     <a href="{{ route( 'site.noticias_3' )}}">
                                         <h5 id="5maneiras"></h5>
                                     </a>
-                                    <span>Março 5, 2023</span>
+                                    <span>30 Novembro</span>
                                 </li>
                             </ul>
                         </div>  

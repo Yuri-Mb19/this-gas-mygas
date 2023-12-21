@@ -13,7 +13,7 @@ class Noticias3Controller extends Controller
     public function index()
     {
      
-        $product3s = Product3::latest()->paginate(5);
+        $product3s = Product3::latest()->paginate();
      
         return view('site.noticias_3',compact('product3s'));
 
